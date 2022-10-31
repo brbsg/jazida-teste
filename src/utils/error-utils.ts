@@ -20,7 +20,8 @@ export function errorTypeToStatusCode(type: AppErrorTypes) {
   if (type === "wrong_schema") return 422;
   return 400;
 }
-
+// env_file:
+// - .env
 export function badRequestError(message?: string): AppError {
   return { type: "bad_request", message };
 }
