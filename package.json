@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "heroku-postbuild": "npx prisma migrate deploy && tsc",
+    "heroku-postbuild": "npx prisma db push && tsc",
     "start": "tsc && node dist/server.js",
     "dev": "nodemon src/server.ts"
   },
