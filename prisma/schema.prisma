@@ -1,0 +1,21 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// postgresql
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+model Pokemon {
+  id         Int     @id @default(autoincrement())
+  tipo       String  
+  treinador  String
+  nivel      Int     @default(1)
+
+  @@map("pokemons")
+}
