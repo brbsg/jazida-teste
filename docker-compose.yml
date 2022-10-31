@@ -14,7 +14,7 @@ services:
     command: npm start
 
   db:
-    image: "mcr.microsoft.com/mssql/server:2022-latest"
+    image: "mcr.microsoft.com/mssql/server:2019-latest"
     user: root
     ports:
       - 1433:1433
